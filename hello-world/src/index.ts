@@ -1,4 +1,6 @@
-let arr: ((string | number)[] | boolean[])[]; // can write conditions to store like this
-arr = [["hello", 10], [true, false]]
-arr = ["hello", 10]; // prodces error
-arr = [["hello", 10], [true, 10]] // produces error;
+let user: [string, number]; // tuples and can have more than 2 but not suggested.
+user = ["Sathya", 21]; // provides code completion for each element
+user = ["Sathya", "21"] // produces error
+user = ["Sathya", 21, 100] // produces error
+
+user.push("hello"); // doesn't produce error(drawback)
