@@ -1,4 +1,4 @@
-enum Size { Small = 0, Medium, Large };
+enum Size { Small = 10, Medium, Large };
 let mySize: Size = Size.Small;
-console.log(mySize); // prints 0;
-console.log(Size.Medium); //prints 1;
+console.log(mySize); // prints 10;
+console.log(Size.Medium); //prints 11;
