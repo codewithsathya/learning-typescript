@@ -2,7 +2,7 @@ let employee: {
   readonly id: number;
   name: string;
   age?: number;
-  retire: (date: Date) => number;
+  retire: (date: Date) => void;
 } = {
   id: 1,
   name: "Sathya",
