@@ -1,9 +1,9 @@
 "use strict";
 var Sizes;
 (function (Sizes) {
-    Sizes[Sizes["Small"] = 8.13] = "Small";
-    Sizes[Sizes["Medium"] = 9.13] = "Medium";
-    Sizes[Sizes["Large"] = 10.13] = "Large";
+    Sizes[Sizes["Small"] = 9] = "Small";
+    Sizes[Sizes["Medium"] = 9] = "Medium";
+    Sizes[Sizes["Large"] = 10] = "Large";
 })(Sizes || (Sizes = {}));
 ;
 console.log(Sizes.Small);
