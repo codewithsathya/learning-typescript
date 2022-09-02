@@ -1,12 +1,11 @@
 "use strict";
-var Size;
-(function (Size) {
-    Size[Size["Small"] = 0] = "Small";
-    Size[Size["Medium"] = 1] = "Medium";
-    Size[Size["Large"] = 2] = "Large";
-})(Size || (Size = {}));
+var Sizes;
+(function (Sizes) {
+    Sizes[Sizes["Small"] = 8.13] = "Small";
+    Sizes[Sizes["Medium"] = 9.13] = "Medium";
+    Sizes[Sizes["Large"] = 10.13] = "Large";
+})(Sizes || (Sizes = {}));
 ;
-let mySize = Size.Small;
-console.log(mySize);
-console.log(Size.Medium);
+console.log(Sizes.Small);
+console.log(Sizes.Medium);
 //# sourceMappingURL=index.js.map
