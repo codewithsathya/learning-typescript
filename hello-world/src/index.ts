@@ -1,8 +1,8 @@
-type Quantity = 50 | 100;
+function greet(name: string | null | undefined){
+  if(name)
+    console.log(name.toUpperCase());
+  else
+    console.log("Stupid input");
+}
 
-let quantity: Quantity;
-quantity = 100;
-quantity = 50;
-quantity = 41; // shows error
-
-type Metric = 'cm' | 'inch';
+greet(null);
