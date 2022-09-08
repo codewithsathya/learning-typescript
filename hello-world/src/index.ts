@@ -1,7 +1,8 @@
 class Account{
-  id: number;
+  readonly id: number; // cannot change this
   owner: string
   balance: number
+  number?: number // optional property
 
   constructor(id: number, owner: string, balance: number){
     this.id = id;
@@ -19,6 +20,5 @@ class Account{
 
 let account = new Account(1, "Sathya", 0);
 account.deposit(100);
+account.id = 10; // shows error
 console.log(account);
-console.log(typeof account)
-console.log(account instanceof Account);
