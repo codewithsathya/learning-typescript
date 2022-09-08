@@ -5,28 +5,18 @@ class Person{
     return this.firstName + " " + this.lastName;
   }
 
-  walk(){
+  private walk(){
     console.log("Walking");
   }
-}
 
+  protected sit(){
+    console.log("sitting")
+  }
+}
 class Teacher extends Person{
   override get fullName(){
+    this.walk(); // shows error
+    this.sit();
     return "Professor " + super.fullName;
   }
 }
-
-function printNames(people: Person[]){
-  for(let person of people){
-    console.log(person.fullName);
-  }
-}
-
-printNames([
-  new Person("John", "Smith"),
-  new Teacher("Ram", "Kumar")
-])
-
-let teacher = new Teacher("John", "Smith");
-
-// console.log(teacher.fullName);
