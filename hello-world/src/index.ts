@@ -1,22 +1,11 @@
 class Account {
   number?: number // optional property
-  // readonly id: number; // cannot change this
-  // owner: string
-  // private _balance: number //usually names start with _
 
-  // constructor(id: number, owner: string, balance: number){
-  //   this.id = id;
-  //   this.owner = owner;
-  //   this._balance = balance;
-  // }
-
-  // The above code can be written as below
   constructor(
-    public readonly id: number, 
+    public readonly id: number,  
     public owner: string, 
     private _balance: number,
-    public phone?: number,
-    public email?: string) {
+  ) { 
 
   }
 
@@ -27,15 +16,22 @@ class Account {
     this._balance += amount;
   }
 
-  getBalance(): number {
-    return this._balance;
+  get balance(): number{
+    if(this.owner !== "admin")
+      return this._balance;
+    return -1;
   }
 
-  private _calculateTax() { 
-
+  set balance(value: number){
+    if(this.owner !== "admin"){
+      this._balance = value;
+    }
   }
 }
 
 let account = new Account(1, "Sathya", 0);
 account.deposit(100);
-console.log(account.getBalance());
+
+console.log(account.balance);
+account.balance++;
+console.log(account.balance);
