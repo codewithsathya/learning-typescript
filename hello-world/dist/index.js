@@ -1,19 +1,33 @@
 "use strict";
-class Shape {
-    constructor(name) {
-        this.name = name;
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
     }
-    erase() {
-        console.log("Erasing ", this.name);
-    }
-}
-class Circle extends Shape {
-    render() {
-        console.log("Rendering a circle");
-    }
-}
-let circle = new Circle("circle1");
-console.log(circle);
-circle.render();
-circle.erase();
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const Shapes_1 = require("./Shapes");
+const storage_1 = __importStar(require("./storage"));
+const circle = new Shapes_1.Circle();
+circle.draw();
+const storage = new storage_1.default();
+console.log(storage);
+console.log(storage_1.Format.Compressed);
 //# sourceMappingURL=index.js.map

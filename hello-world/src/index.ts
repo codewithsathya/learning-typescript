@@ -1,30 +1,5 @@
-// abstract class Calendar{
-//   constructor(public name: string){}
+import Storage, { Format } from "./storage";
 
-//   abstract addEvent(): void;
-//   abstract removeEvent(): void;
-// }
-
-interface Calender{
-  name: string;
-  addEvent(): void;
-  removeEvent(): void
-}
-
-interface CloudCalender extends Calender{
-  sync(): void;
-}
-
-class GoogleCalendar implements CloudCalender{
-  constructor(public name: string){}
-
-  sync(): void {
-    throw new Error("Method not implemented.");
-  }
-  addEvent(): void {
-    throw new Error("Method not implemented.");
-  }
-  removeEvent(): void {
-    throw new Error("Method not implemented.");
-  }
-}
+const storage = new Storage();
+console.log(storage);
+console.log(Format.Compressed)
