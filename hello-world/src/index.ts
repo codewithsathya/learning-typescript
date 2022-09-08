@@ -1,5 +1,6 @@
-import Storage, { Format } from "./storage";
+import * as Shapes from "./Shapes";
 
-const storage = new Storage();
-console.log(storage);
-console.log(Format.Compressed)
+const Circle = Shapes.Circle;
+
+let circle = new Circle();
+circle.draw();
