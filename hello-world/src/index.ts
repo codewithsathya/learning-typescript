@@ -1,21 +1,30 @@
-abstract class Shape{
+// abstract class Calendar{
+//   constructor(public name: string){}
+
+//   abstract addEvent(): void;
+//   abstract removeEvent(): void;
+// }
+
+interface Calender{
+  name: string;
+  addEvent(): void;
+  removeEvent(): void
+}
+
+interface CloudCalender extends Calender{
+  sync(): void;
+}
+
+class GoogleCalendar implements CloudCalender{
   constructor(public name: string){}
 
-  abstract render(): void;
-
-  erase(){
-    console.log("Erasing ", this.name);
+  sync(): void {
+    throw new Error("Method not implemented.");
+  }
+  addEvent(): void {
+    throw new Error("Method not implemented.");
+  }
+  removeEvent(): void {
+    throw new Error("Method not implemented.");
   }
 }
-
-class Circle extends Shape{
-  render(): void {
-      console.log("Rendering a circle");
-  }
-}
-
-let circle = new Circle("circle1");
-
-console.log(circle);
-circle.render();
-circle.erase();
