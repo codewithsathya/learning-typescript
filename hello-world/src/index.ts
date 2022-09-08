@@ -10,14 +10,12 @@ class Person{
   }
 }
 
-class Student extends Person{
-  constructor(public studentId: number, firstName: string, lastName: string){
-    super(firstName, lastName);
-  }
-
-  takeTest(){
-    console.log("Taking test");
+class Teacher extends Person{
+  override get fullName(){
+    return "Professor " + super.fullName;
   }
 }
 
-let student = new Student(1, "John", "");
+let teacher = new Teacher("John", "Smith");
+
+console.log(teacher.fullName);
