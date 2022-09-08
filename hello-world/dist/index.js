@@ -1,29 +1,15 @@
 "use strict";
-class Person {
-    constructor(firstName, lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-    get fullName() {
-        return this.firstName + " " + this.lastName;
-    }
-    walk() {
-        console.log("Walking");
+class Shape {
+    constructor(name) {
+        this.name = name;
     }
 }
-class Teacher extends Person {
-    get fullName() {
-        return "Professor " + super.fullName;
+class Circle extends Shape {
+    render() {
+        console.log("Rendering a circle");
     }
 }
-function printNames(people) {
-    for (let person of people) {
-        console.log(person.fullName);
-    }
-}
-printNames([
-    new Person("John", "Smith"),
-    new Teacher("Ram", "Kumar")
-]);
-let teacher = new Teacher("John", "Smith");
+let circle = new Circle("circle1");
+console.log(circle);
+circle.render();
 //# sourceMappingURL=index.js.map

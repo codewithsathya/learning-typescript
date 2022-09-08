@@ -1,22 +1,16 @@
-class Person{
-  constructor(public firstName: string, public lastName: string){}
+abstract class Shape{
+  constructor(public name: string){}
 
-  get fullName(){
-    return this.firstName + " " + this.lastName;
-  }
+  abstract render(): void;
+}
 
-  private walk(){
-    console.log("Walking");
-  }
-
-  protected sit(){
-    console.log("sitting")
+class Circle extends Shape{
+  render(): void {
+      console.log("Rendering a circle");
   }
 }
-class Teacher extends Person{
-  override get fullName(){
-    this.walk(); // shows error
-    this.sit();
-    return "Professor " + super.fullName;
-  }
-}
+
+let circle = new Circle("circle1");
+
+console.log(circle);
+circle.render();
