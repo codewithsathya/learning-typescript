@@ -26,5 +26,4 @@ printNames([
     new Teacher("Ram", "Kumar")
 ]);
 let teacher = new Teacher("John", "Smith");
-console.log(teacher.fullName);
 //# sourceMappingURL=index.js.map
