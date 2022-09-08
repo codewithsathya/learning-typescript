@@ -1,6 +1,17 @@
 import express from 'express';
-import fs from 'fs'
-const app = express();
+import axios from 'axios';
 
-const http = require('fs');
+const app = express();
+app.use(express.json());
+
+interface ReminderDto{
+  title: string
+}
+
+app.post("/", async (req, res) => {
+  let data = req.body as ReminderDto;
+  console.log(data);
+  res.json({name: "Sathya", title: data.title});
+})
+
 app.listen(8000, () => console.log("Server started"));
