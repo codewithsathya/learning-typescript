@@ -11,10 +11,11 @@ class Account {
         }
         this.balance += amount;
     }
+    getBalance() {
+        return this.balance;
+    }
 }
 let account = new Account(1, "Sathya", 0);
 account.deposit(100);
-console.log(account);
-console.log(typeof account);
-console.log(account instanceof Account);
+console.log(account.getBalance());
 //# sourceMappingURL=index.js.map
