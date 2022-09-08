@@ -1,8 +1,14 @@
 "use strict";
-function processEvents() {
-    while (true) {
+class Account {
+    constructor(id, owner, balance) {
+        this.id = id;
+        this.owner = owner;
+        this.balance = balance;
+    }
+    deposit(amount) {
+        if (amount <= 0) {
+            throw new Error("Invalid amount");
+        }
     }
 }
-processEvents();
-console.log("Hello World");
 //# sourceMappingURL=index.js.map
