@@ -1,8 +1,5 @@
-let speed: number | null = null;
-
-let ride = {
-  // Falsy (undefined, null, '', false, 0)
-  //speed: speed || 30 // here if speed is 0, then speed property will be set to 30.
-  // Nullish coalescing operator
-  speed: speed ?? 30
-}
+let phone = document.getElementById('phone') as HTMLInputElement; 
+// we are telling typescript "I know what it returns you don't have to assume it"
+// HTMLElement
+// HTMLInputElement
+phone.value = "asdf";
