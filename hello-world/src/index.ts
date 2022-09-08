@@ -1,5 +1,8 @@
-let phone = document.getElementById('phone') as HTMLInputElement; 
-// we are telling typescript "I know what it returns you don't have to assume it"
-// HTMLElement
-// HTMLInputElement
-phone.value = "asdf";
+function processEvents(): never{
+  while(true){
+    // Read a message from a queue
+  }
+}
+
+processEvents();
+console.log("Hello World")
