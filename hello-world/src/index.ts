@@ -1,7 +1,7 @@
 class Account{
   readonly id: number; // cannot change this
   owner: string
-  private _balance: number
+  private _balance: number //usually names start with _
   number?: number // optional property
 
   constructor(id: number, owner: string, balance: number){
@@ -19,6 +19,10 @@ class Account{
 
   getBalance(): number{
     return this._balance;
+  }
+
+  private _calculateTax(){ // we can also set private methods
+
   }
 }
 
