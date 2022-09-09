@@ -1,6 +1,4 @@
-import * as Shapes from "./Shapes";
+import { Circle, Square } from "./shapes"
 
-const Circle = Shapes.Circle;
-
-let circle = new Circle();
-circle.draw();
+new Circle().draw();
+new Square().draw();
