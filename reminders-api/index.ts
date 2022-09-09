@@ -1,12 +1,9 @@
 import express from 'express';
-import axios from 'axios';
+import { ReminderDto } from './interfaces/reminder-dto';
+
 
 const app = express();
 app.use(express.json());
-
-interface ReminderDto{
-  title: string
-}
 
 app.post("/", async (req, res) => {
   let data = req.body as ReminderDto;
